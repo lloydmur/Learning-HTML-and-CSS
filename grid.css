@@ -1,0 +1,274 @@
+*{
+  margin: 0;
+  padding: 0;
+  /*subtractive boz model*/
+  box-sizing: content-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #aa2222 ;
+  background: linear-gradient(to bottom, #882222, gold);
+  color: #ffffff;
+  line-height: 1.5;
+}
+main{
+  width: 90%;
+  max-width: 800px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10vh 4vh 38vh 38vh 10vh;
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+header{
+  grid-area: header;
+}
+header h1{
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px darkgrey;
+}
+nav{
+  grid-area: nav;
+  margin: 0 auto;
+}
+nav.options{
+  width: 90%;
+  background-color: white;
+  padding: 10px;
+  border-top: 3px solid silver;
+  border-radius: 3px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.options-link{
+  text-decoration: none;
+  font-size: 0.9em;
+  color: darkslategray;
+}
+.options-link:hover{
+  color: gold;
+  text-decoration: underline;
+}
+
+.card{
+  color: #332233;
+  background-color: white;
+  border: solid gold;
+  border-radius: 3px;
+}
+.card-blue{
+  background-color: #fe9544;
+  border: solid silver;
+  border-radius: 3px;
+}
+.card-title{
+  color: white;
+  background-color: crimson;
+}
+input{
+  width: 85%;
+  color: darkblue;
+  background-color: aliceblue;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+section{
+  padding: 10px;
+  color: #244860;
+  text-align: center;
+}
+section-img{
+  max-width: 100%;
+}
+.profile{
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  border: 6px solid #334477;
+}
+footer{
+  grid-area: footer;
+  margin: 20px 0;
+  text-align: center;
+}
+/*------------LOGIN----------------*/
+
+#login{
+  grid-area: login;
+}
+
+#enhance_career{
+  grid-area: enhance_career;
+}
+/* STATS */
+#important_stats{
+  grid-area: important_stats;
+}
+.graphs{
+  font-size: 100px;
+  line-height: 1;
+  margin: 10px 0;
+  text-align: center;
+}
+#build_games{
+  grid-area: build_games;
+}
+
+#build_apps{
+  grid-area: build_apps;
+}
+
+#build_websites{
+  grid-area: build_websites;
+}
+
+#container{
+  /*MUST CONFORM ELEMENTS TO TEMPLATE*/
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "login enhance_career important_stats"
+    "build_apps build_games build_websites"
+    "footer footer footer";
+
+}
+@media screen and (min-width:1000px){
+  main{
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 4vh auto auto 10vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  #container{
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "login enhance_career important_stats"
+    "build_apps build_games build_websites"
+    "footer footer footer";
+  }
+}
+.graphs{
+  font-size: 100px;
+  line-height: 1.25;
+  margin: 10px 0;
+  text-align: center;
+}
+@media screen and (max-width:1000px){
+  header h1{
+    font-size: 3em;
+  }
+  main{
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 4vh auto auto auto;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  #container{
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "login enhance_career"
+      "important_stats build_apps"
+      "build_games build_websites"
+      "footer footer";
+
+  }
+  section{
+    padding: 10px;
+  }
+  .graphs{
+    font-size: 100px;
+    line-height: 1.25;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .profile{
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 6px solid gold;
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  header h1{
+    font-size: 2.5em;
+  }
+  section{
+    font-size: 14px;
+    padding: 10px;
+  }
+  .profile{
+    width: 20%;
+  }
+  .graphs{
+    font-size: 90px;
+    margin-left: 3% 0 0;
+  }
+}
+/*Phone Size*/
+@media screen and (max-width:500px){
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+    header h1{
+    font-size: 2.25em;
+    margin-bottom: 0;
+  }
+  nav{
+    margin-top: 0;
+  }
+  .options{
+    font-size: 12px;
+  }
+  footer{
+    margin-bottom: 100px;
+  }
+  main{
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto 5vh auto auto auto
+      auto auto 20vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  #container{
+    grid-template-areas:
+      "header"
+      "nav"
+      "login"
+      "enhance_career"
+      "important_stats"
+      "build_apps"
+      "build_games"
+      "build_websites"
+      "footer";
+
+  }
+}
