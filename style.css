@@ -103,9 +103,12 @@ footer{
 
 }
 footer ul{
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  width: 50%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 
 }
@@ -147,6 +150,33 @@ footer a.zbtn:hover{
 footer ul li a:hover{
   color: black;
 }
+footer #pgbtns{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 15px;;
+  width: 50%;
+  margin: 20px;
+}
+#pgbtns a.pgbtn{
+  text-decoration: none;
+  margin: 10px;
+  padding: 0px;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 20%;
+  height: 100%;
+  background-color: darkolivegreen;
+  color:lightgreen;
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+}
+#pgbtns a.pgbtn:hover{
+  color: black;
+  background-color: lightgreen;
+}
+
 @media(max-width: 800px){
     footer{
       padding: 80px 15px;
