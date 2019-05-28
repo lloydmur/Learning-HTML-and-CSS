@@ -12,15 +12,14 @@
   </head>
   <body id="top">
     <header>
-      <h2><a href="#" target="_black"><img src="img/mycon.ico" alt=""></a></h2>
+      <h2><a href="#top" target="_black"><img src="img/mycon.ico" alt=""></a></h2>
       <nav>
         <ul>
-            <li><a href="#top">Top</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Projects</a></li>
-            <li><a href="#getting-around">Travel</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!--<li><a href="#getting-around">Travel</a></li>
             <li><a href="#famous-quotes">Quotes</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>-->
             <li><a href="#social-media">Links</a></li>
         </ul>
       </nav>
@@ -35,15 +34,15 @@
     <div id="about">
       <h3 class="title">About me</h3>
         <div id="twocol">
-          <div class="about-img"><img src="img/about.jpg" alt="thumb up">
+          <div class="about-img"><img src="img/S_edit_1.jpg" alt="thumbs up" width="120" height="120">
           </div>
         <div class="about-bio">
           <p>
             I graduated in May 2019 from the University at Buffalo; where I studied computer engineering.
             The journey was rough and discouraging at times, but here I am.
             Even though school is over for me, I will continue to seek knowledge and expand my capabilities.
-            I am not a very talkative person. I like learning, working with microcontrollers,
-            drawing and playing video games.
+            I'm not a very talkative person. I like learning, working with microcontrollers,
+            drawing and playing video games. Honestly, I enjoy almost anything so long as I know what I'm doing.
           </p>
         </div>
       </div>
@@ -51,19 +50,44 @@
     </div>
 
     <!-- **************************************************** -->
-    <div id="gallery" class="photo-gallery">
-      <h3 class="title">Projects</h3>
-      <p>Here are some pictures of some things I've worked on.</p>
-      <ul class="grid">
-        <li class="small" style="background-image: url('img/alaska-wilderness-sky-aurora-borealis.jpg');"></li>
-        <li class="large" style="background-image: url('img/glacier.jpg');"></li>
-        <li class="small" style="background-image: url('img/alaska-glacier-ice-mountains.jpg');"></li>
-        <li class="large" style="background-image: url('img/clouds.jpg');"></li>
-      </ul>
-      <hr style="background-color: blue;">
+    <div id="projects" class="photo-gallery">
+      <h3 class="title" style="color: #559955;">Projects</h3>
+      <p>Here are some of the things I've worked on.</p>
+      <div id="launcher">
+        <section class="launcher-image">
+          <img src="img/Launcher.jpg" alt="Pfbfbfbfbft">
+        </section>
+        <section class="launcher-text">
+          <h4>Air Powered Rocket Launcher</h4>
+          <p>
+            <span class="subtitle">(Spring 2019):</span>
+             In a Hardware/Software system design course I've had the pleasure of producing a product for a real client. The task was to build an air powered rocket launcher for
+            <a id="alden-link" href="https://www.aldenschools.org/Page/4092" target="_blank">Alden Middle School.</a> The school was hosting a 'STEAM Night' event to motivate young'uns into learning more about science and technology fields. The Rocket launcher was to be one of the main attractions.
+            <hr class="divider" style="background-color: darkslategray;">
+            <p id="learn-more">To learn more about the design, check out the <a href="https://drive.google.com/open?id=1h9CVGn9TPeVY9omCJcegOH3GR36FmiCH" target="_blank">requirements document</a>
+            and <a href="https://drive.google.com/open?id=1J1J0EsyX7qoitDWh-Nhui5dY5PedlTKl" target="_blank">design document</a>.</p>
+          </p>
+        </section>
+      </div>
+      <div id="game">
+        <section class="game-image">
+          <video width="420" height="315" controls>
+            <source src="vid/snecsnacc.mp4" type="video/mp4">
+
+          </video>
+        </section>
+        <section class="game-text">
+          <h4>Snec Snacc</h4>
+          <p>
+            <span class="subtitle">(Fall 2018):</span>
+            A software engineering course was my first time eperiencing agile development. By working on a "team" and "dividing" tasks amongst ourselves, we were able to produce a small game programmed in C#.
+          </p>
+        </section>
+      </div>
+      <hr style="background-color: darkslategray;">
     </div>
-    <!-- **************************************************** -->
-    <div id="getting-around">
+    <!-- **************************************************** --
+    <<div id="getting-around">
       <h3 class="title">Traveling</h3>
       <p>Methods of transpotation.</p>
       <ul class="grid">
@@ -77,7 +101,7 @@
       <hr style="background-color: black;">
     </div>
 
-    <!-- **************************************************** -->
+    <!-- **************************************************** --
     <div id="famous-quotes">
       <h3 class="title">What others have said.</h3>
       <p><img src="img/dickens.jpg" alt="Charles Dickens" class="portrait-photos"></p>
@@ -92,8 +116,8 @@
       <p class="author">&mdash;Leonardo Do Vinci</p>
       <hr style="background-color: darksalmon;">
     </div>
-    <!-- **************************************************** -->
-    <div id="contact">
+    <!-- **************************************************** --
+      <div id="contact">
       <h3 class="title">Contact Me</h3>
       <div class="congrid">
         <section class="fsect">
@@ -110,15 +134,23 @@
         </div>
       </div>
       <hr style="background-color: deepskyblue;">
-    </div>
+    </div>-->
     <!-- **************************************************** -->
 
     <!-- **************************************************** -->
     <footer id="social-media">
+      <section class="c-info">
+        <h4 class="title">Contact Me</h4>
+        <p class="email" style="text-transform: lowercase; text-align: left; font-weight: bold;">E-mail: lloydmur4@gmail.com</p>
+        <p class="phone" style="text-transform: lowercase; text-align: left; font-weight: bold;">
+           Phone: (716)866-7616
+       </p>
+      </section>
+      </section>
       <ul>
         <li><a href="#" target="blank"><i class="fab fa-twitter-square"></i></a></li>
         <li><a href="#" target="blank"><i class="fab fa-facebook-square"></i></a></li>
-        <li><a href="#" target="blank"><i class="fab fa-github-alt"></i></i></a></li>
+        <li><a href="https://github.com/lloydmur" target="blank"><i class="fab fa-github-alt"></i></i></a></li>
         <li><a href="#" target="blank"><i class="fab fa-linkedin lnkd"></i></a></li>
       </ul>
       <p id="pgbtns">

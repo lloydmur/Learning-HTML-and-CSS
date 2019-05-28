@@ -53,7 +53,7 @@ header nav li:first-child{
 header nav li:last-child{
   margin-right: 0;
 }
-@media(max-width:800px){
+@media screen and (max-width:800px){
   header{
     text-align:center;
     flex-direction: column;
@@ -93,14 +93,18 @@ footer{
   /*Creates a nice color pade effect (style, 1st color, 2nd color)*/
   background: linear-gradient(to bottom, rgb(100, 100, 0), black);
   padding: 60px 0;
-
   /*Flexible box will cause text to roll automatically*/
   display: flex;
   /**/
   flex-direction: column;
   align-items: center;
-
-
+}
+.c-info .title{
+  text-decoration: overline underline;
+  font-weight: bold;
+  font-size: 24px;
+  color: darkgoldenrod;
+  margin: 5px 0px;
 }
 footer ul{
   margin-bottom: 10px;
@@ -109,8 +113,6 @@ footer ul{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-
 }
 footer ul li{
   margin: 0 8px;
@@ -123,7 +125,7 @@ footer ul li a{
 }
 
 
-footer p {
+footer p{
 
   text-transform: uppercase;
   font-size: 14px;
@@ -153,19 +155,17 @@ footer ul li a:hover{
 footer #pgbtns{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 15px;;
-  width: 50%;
+  justify-content: space-between;
   margin: 20px;
 }
 #pgbtns a.pgbtn{
   text-decoration: none;
-  margin: 10px;
-  padding: 0px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 20px;
   border-radius: 4px;
   font-size: 12px;
-  width: 20%;
+  width: auto;
   height: 100%;
   background-color: darkolivegreen;
   color:lightgreen;
@@ -177,7 +177,7 @@ footer #pgbtns{
   background-color: lightgreen;
 }
 
-@media(max-width: 800px){
+@media screen and (max-width: 800px){
     footer{
       padding: 80px 15px;
     }
@@ -227,7 +227,7 @@ h1, h2. h3{
 }
 
 /*Rule for everything below 800px in size*/
-@media(max-width:800px){
+@media screen and (max-width:800px){
   #hero{
     min-height: 600px;
   }
@@ -255,6 +255,7 @@ h1, h2. h3{
   border: 4px solid gold;
   background-color: darksalmon;
   margin-right: 10px;
+  border-style: ridge;
 }
 #about #twocol .about-bio{
   width: 65%;
@@ -272,7 +273,7 @@ h3.title{
 
 
 
-@media(max-width:600px) {
+@media screen and (max-width:600px) {
   #about, #about #twocol{
     flex-direction: column;
   }
@@ -286,43 +287,172 @@ h3.title{
 /*
 ------------------------PHOTO GALLERY------------------------
 */
-#gallery{
+#projects{
   background-color: lightseagreen;
-  padding: 10px 0;
-}
-#gallery ul.grid{
-  width: 100%;
+  padding: 20px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-
+  align-items: center;
+  background: linear-gradient(to bottom, #DDDDDD, seagreen);
 }
-#gallery .grid li{
-  padding: 20px;
-  height: 350px;
-  border-radius: 3px;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
-  background-color: #333;
-}
-#gallery .grid li.small{
-  flex-basis: 40%;
-}
-#gallery .grid li.large{
-  flex-basis: 60%;
-}
-#gallery p{
+#projects p{
   max-width: 800px;
   text-align: center;
   margin: 0 auto 35px;
   padding: 0 20px;
   line-height: 2;
 }
-@media(max-width: 600px) {
-  #gallery .grid li.small,
-  #gallery .grid li.large{
-    flex-basis: 100%;
+#launcher{
+  height: 50%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+}
+section.launcher-image{
+  margin-right: 100px;
+  display: flex;
+  background-color: black;
+  padding: 3px;
+  border: 5px ridge gold;
+  border-radius: 5px;
+}
+.launcher-image img{
+  max-width: 400px;
+  max-height: 600px;
+}
+section.launcher-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  background-color: #FFFFFFFF;
+  border-radius: 10px;
+  color: black;
+}
+.launcher-text h4{
+  background-color: darkgray;
+  background: linear-gradient(90deg, lightseagreen, skyblue);
+  text-align: center;
+  font-size: 32px;
+  width: auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.launcher-text .subtitle{
+  font-weight: bold;
+}
+.launcher-text p{
+  text-align: left;
+  word-wrap: normal;
+  margin: 0;
+  padding: 0;
+}
+hr.divider{
+  width: 100px;
+  height: 2px;
+  border: 0;
+  margin: 0 auto;
+}
+
+.launcher-text p a{
+  color: darkviolet;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+.launcher-text p a:hover{
+  color: violet;
+}
+/*Game section*/
+#game{
+  height: 50%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+}
+section.game-image{
+  margin-right: 100px;
+  display: flex;
+  background-color: black;
+  padding: 3px;
+  border: 5px ridge gold;
+  border-radius: 5px;
+}
+.game-image video{
+  max-width: 400px;
+  max-height: 600px;
+}
+section.game-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  background-color: #FFFFFFFF;
+  border-radius: 10px;
+  color: black;
+}
+.game-text h4{
+  background-color: darkgray;
+  background: linear-gradient(90deg, deepskyblue, limegreen);
+  color: linear-gradient(to bottom,limegreen, deepskyblue);
+  text-align: center;
+  font-size: 32px;
+  width: auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.game-text .subtitle{
+  font-weight: bold;
+}
+.game-text p{
+  text-align: left;
+  word-wrap: normal;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  #launcher, #game{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section.launcher-image, section.game-image{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: 5px ridge gold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .launcher-image img{
+    max-width: 400px;
+    max-height: 600px;
+  }
+  .launcher-text p{
+    line-height: .5;
+  }
+  .game-image video{
+    width: 360px;
+    height: 240px;
+  }
+}
+@media screen and (max-width: 500px){
+  .launcher-image img{
+    max-width: 250px;
+    max-height: 375px;
+  }
+  .game-image video{
+    max-width: 300px;
+    max-height: 200px;
   }
 }
 /*
@@ -365,7 +495,7 @@ h3.title{
   text-align: left;
   margin: 0;
 }
-@media(max-width: 800px){
+@media screen and (max-width: 800px){
   #getting-around{
     margin: 0 0px;
   }
@@ -405,7 +535,7 @@ in this case Parent is fampus QUOTES
 #famous-quotes .author:last-child{
   margin: 0;
 }
-@media(max-width: 800px){
+@media screen and (max-width: 800px){
   #famous-quotes .quote{
     font-size: 18px;
     padding: 0 20px;
@@ -444,7 +574,7 @@ section.fsect p{
   padding: 0 20px;
   line-height: 1.5;
 }
-@media(max-width:800px){
+@media screen and (max-width:800px){
   .gform{
     height: 1250px;
   }
