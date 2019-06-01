@@ -87,6 +87,7 @@ hr{
   border: 0;
   margin: 40px auto;
 }
+
 /*
 -------------FOOTER-------------------------
 */
@@ -582,4 +583,35 @@ section.fsect p{
   .gform{
     height: 1250px;
   }
+}
+/*Game*/
+.floppy-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0px;
+  background: linear-gradient(90deg ,aquamarine, lawngreen);
+
+}
+.floppy-box #btn-col{
+  flex-basis: 10%;
+  height: auto;
+  margin: 10px;
+  background: black;
+  border-radius: 4px;
+}
+.floppy-box #btn-col #p-btn{
+  background-color: yellow;
+  color: black;
+  margin: 10px;
+  width: 80%;
+  height: 50px;
+}
+canvas{
+  background-color: black;
+  padding: 0px;
+  border: 3px solid limegreen;
+  margin: 10px;
+  width: 80%;
+  height: 80%;
 }
