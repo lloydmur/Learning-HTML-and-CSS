@@ -97,7 +97,7 @@ footer{
   text-align: center;
   /*Creates a nice color pade effect (style, 1st color, 2nd color)*/
   background: linear-gradient(to bottom, rgb(100, 100, 0), black);
-  padding: 60px 0;
+  padding: 20px 0;
   /*Flexible box will cause text to roll automatically*/
   display: flex;
   /**/
@@ -586,15 +586,21 @@ section.fsect p{
 }
 /*Game*/
 .floppy-box{
+  padding: 0px;
+  background: linear-gradient(90deg ,aquamarine, lawngreen);
+  text-align: center;
+  color: black;
+}
+.floppy-box h4{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.fb-game{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding: 0px;
-  background: linear-gradient(90deg ,aquamarine, lawngreen);
-
 }
 .floppy-box #btn-col{
-  flex-basis: 10%;
   height: auto;
   margin: 10px;
   background: black;
@@ -614,4 +620,24 @@ canvas{
   margin: 10px;
   width: 80%;
   height: 80%;
+}
+@media screen and (max-width: 800px) {
+  .fb-game{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .floppy-box #btn-col{
+    max-height: 10%;
+    margin: 10px;
+    background: black;
+    border-radius: 4px;
+  }
+  canvas{
+    background-color: black;
+    padding: 0px;
+    border: 3px solid limegreen;
+    margin: 0px auto 10px;;
+    width: 100%;
+  }
 }

@@ -137,7 +137,6 @@ var NSJam = NSJam || {}; //namespace
 
    var draw = function(){
      ctx.clearRect(0,0, GAME_WIDTH, GAME_HEIGHT);
-
      ctx.fillStyle = "#884422";
      ctx.fillRect(boxo.x, boxo.y, boxo.w, boxo.h);
      /*enemy movement*/
@@ -156,6 +155,10 @@ var NSJam = NSJam || {}; //namespace
          updatePositions();
          draw();
          checkHit();
+       }
+       else{
+         ctx.fillStyle = "Yellow";
+         ctx.fillText("Game is Paused",GAME_WIDTH/2 - 100,GAME_HEIGHT/2 + 30);
        }
       window.requestAnimationFrame(step);
       }
